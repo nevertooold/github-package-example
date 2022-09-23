@@ -133,4 +133,13 @@
     </profile>
   </profiles>
 
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub nevertooold Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/nevertooold/github-package-example</url>
+    </repository>
+  </distributionManagement>
+
+
 </project>
