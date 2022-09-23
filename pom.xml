@@ -3,7 +3,7 @@
 
   <groupId>org.example</groupId>
   <artifactId>github-package-example</artifactId>
-  <version>1.0.5-SNAPSHOT</version>
+  <version>1.0.5</version>
   <packaging>jar</packaging>
 
   <name>github-package-example</name>
@@ -57,10 +57,10 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git://github.com/nevertooold/github-package-example.git</connection>
+    <connection>scm:git://github.com/nevertooold/github-package-example.git</connection>
     <developerConnection>scm:git:https://github.com/nevertooold/github-package-example.git</developerConnection>
     <url>https://github.com/nevertooold/github-package-example</url>
-    <tag>github-package-example</tag>
+    <tag>github-package-example-1.0.5</tag>
   </scm>
 
   <profiles>
