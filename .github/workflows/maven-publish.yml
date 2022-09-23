@@ -14,11 +14,12 @@ jobs:
 
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       packages: write
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Set up JDK 11
       uses: actions/setup-java@v3
       with:
@@ -31,11 +32,30 @@ jobs:
       run: mvn validate -DbumpPatch
 
     - name: Commit changes
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: Bumps version
+      run: |
+        git config --global user.name 'Rakesh Thomas'
+        git config --global user.email 'rakeshjosethomas@gmail.com'
+        git add pom.xml
+        git commit -m "Bumps version"
+        git push origin main
+
+#    - name: Push changes
+#      uses: ad-m/github-push-action@master
+#      with:
+#        github_token: ${{ secrets.GITHUB_TOKEN }}
+#        branch: ${{ github.ref }}
       env:
         GITHUB_TOKEN: ${{ github.token }}
+      #      uses: stefanzweifel/git-auto-commit-action@v4
+#      with:
+#        commit_message: Bumps version
+#        commit_user_name: Rakesh Thomas
+#        commit_user_email: rakeshjosethomas@gmail.com
+#        commit_author: Rakesh Thomas <rakeshjosethomas@gmail.com>
+#        file_pattern: pom.xml
+#      env:
+#        GITHUB_TOKEN: ${{ github.token }}
+
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
