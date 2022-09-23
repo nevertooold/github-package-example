@@ -38,23 +38,8 @@ jobs:
         git add pom.xml
         git commit -m "Bumps version"
         git push origin main
-
-#    - name: Push changes
-#      uses: ad-m/github-push-action@master
-#      with:
-#        github_token: ${{ secrets.GITHUB_TOKEN }}
-#        branch: ${{ github.ref }}
       env:
         GITHUB_TOKEN: ${{ github.token }}
-      #      uses: stefanzweifel/git-auto-commit-action@v4
-#      with:
-#        commit_message: Bumps version
-#        commit_user_name: Rakesh Thomas
-#        commit_user_email: rakeshjosethomas@gmail.com
-#        commit_author: Rakesh Thomas <rakeshjosethomas@gmail.com>
-#        file_pattern: pom.xml
-#      env:
-#        GITHUB_TOKEN: ${{ github.token }}
 
 
     - name: Build with Maven
