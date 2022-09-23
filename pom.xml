@@ -48,6 +48,22 @@
     </plugins>
   </build>
 
+  <developers>
+    <developer>
+      <name>Rakesh Thomas</name>
+      <email>rakeshjosethomas@gmail.com</email>
+      <organization>com.carrots</organization>
+      <organizationUrl>https://github.com/nevertooold/github-package-example</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/nevertooold/github-package-example.git</connection>
+    <developerConnection>scm:git:https://github.com/nevertooold/github-package-example.git</developerConnection>
+    <url>https://github.com/nevertooold/github-package-example</url>
+    <tag>github-package-example</tag>
+  </scm>
+
   <profiles>
     <profile>
       <id>bump-patch</id>
